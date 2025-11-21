@@ -17,7 +17,7 @@ if 'gs_client' not in st.session_state:
     st.session_state.gs_client = gspread.authorize(creds)
     time.sleep(1)
 
-    spreadsheet = st.session_state.gs_client.open("User Study – All Evidence Examples")
+    spreadsheet = st.session_state.gs_client.open("User Study LAQuer Simulation Example")
     st.session_state.examples_df = pd.DataFrame(spreadsheet.worksheet("examples").get_all_records())
     st.session_state.assignments_df = pd.DataFrame(spreadsheet.worksheet("assignments").get_all_records())
     st.session_state.results_sheet = spreadsheet.worksheet("results")
