@@ -80,6 +80,7 @@ def show_example():
             "user_id": user_id,
             "example_id": example_id,
             "claim": row["claim"],
+            "sentences_shown": len(sentences),
             "decision": decision,
             "timestamp": str(datetime.now())
         })
@@ -131,6 +132,7 @@ if st.session_state.user_answers:
                 ans["user_id"],
                 ans["example_id"],
                 ans["claim"],
+                ans["sentences_shown"],
                 ans["decision"],
                 ans["timestamp"]
             ]
